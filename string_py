@@ -1,0 +1,41 @@
+#1 : I want to find if both words are equal and there are no "*"
+#2 : Want to Know if the word have "*" or not:
+#3 : Want to know the words befor and after the "*"
+#4 : want to know the words befor and after the "*" are equal the start and the end of the another word.
+
+
+word1=input("PLZ Enter Word 1 : ")
+word2=input("PLZ Enter Word 2 : ")
+
+if word1 == word2  or word1 =="*":
+   print("True")
+if "*" in word1:
+  ind=word1.find("*")
+  var1=word1[0:ind]
+  var2=word1[ind+1:]
+  if (word2.startswith(var1) and word2.endswith(var2)):
+    print("True")
+else:
+  print("False")
+
+
+
+  
+"""
+1: I need to see if the len of the string is odd or even
+2: I need to know if the the string is from 2 similar parts or not
+""" 
+def is_str_Palindrome ():
+  a= input("Please Enter the string : ")
+  if len(a)%2 !=0:
+    print("it\'s not palindrome String.")
+  if len(a)%2 ==0:
+      x=int(len(a)/2)
+      y=a.split()[0:x+1]
+      z=a.split()[x :]
+
+  if y==z:
+      print("t\'s palindrome String.")
+  else :
+      print("It\'s not palindrome String.")
+  
